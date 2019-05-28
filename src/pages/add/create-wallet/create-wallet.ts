@@ -102,7 +102,9 @@ export class CreateWalletPage implements OnInit {
     });
 
 
-    var arrayRemove = (arr, value) => {
+    this.walletTypes = this.shareService.walletTypes;
+
+    /* var arrayRemove = (arr, value) => {
       return arr.filter((ele) => {
         return ele != value;
       })
@@ -110,7 +112,7 @@ export class CreateWalletPage implements OnInit {
 
     var tempWalletTypes = this.shareService.walletTypes;
 
-    this.walletTypes = arrayRemove(tempWalletTypes, "AIB")
+    this.walletTypes = arrayRemove(tempWalletTypes, "AIB") */
 
     this.setTotalCopayers(this.tc);
     this.updateRCSelect(this.tc);
