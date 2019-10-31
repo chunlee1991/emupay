@@ -24,11 +24,11 @@
   "homepage": "https://copay.io",
   "license": "MIT",
   "repository": {
-    "url": "git://github.com/bitpay/copay.git",
+    "url": "git://github.com/iobond/emupay.git",
     "type": "git"
   },
   "bugs": {
-    "url": "https://github.com/bitpay/copay/issues"
+    "url": "https://github.com/iobond/emupay/issues"
   },
   "scripts": {
     "postinstall": "sed -i  -e \"s/.*require(...\\/...);//g\" node_modules/asn1.js-rfc5280/index.js && run-s e2e:update env:dev prompt",
@@ -39,7 +39,8 @@
     "prepare:bitpay": "run-s clean apply:bitpay && ionic cordova prepare && run-s fix:fcm",
     "clean-all": "git clean -dfx",
     "lint": "ionic-app-scripts lint",
-    "ionic:build": "ionic-app-scripts build",
+    "ionic:debug": "ionic-app-scripts build",
+    "ionic:build": "ionic-app-scripts build --prod --release --aot --minifyjs --optimizejs --minifycss",
     "ionic:serve": "ionic-app-scripts serve",
     "watch": "ng test --browsers=Chrome",
     "test": "run-s env:dev test:lint test:ci env:e2e e2e env:dev",

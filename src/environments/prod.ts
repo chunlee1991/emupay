@@ -20,7 +20,8 @@ const env: EnvironmentSchema = {
    When BaseCoin is not defined here, default wallet creation will fail
  */
 
-export const DefaultAsset = '9CAT';
+ 
+export const DefaultAsset = 'AIB';
 export const BaseCoin = 'AIB';
-export const DefaultWalletServiceUrl = "https://bws.aib.one/bws/api";
+export const DefaultWalletServiceUrl = "https://bws.aib.cash/bws/api";
 export default env;
